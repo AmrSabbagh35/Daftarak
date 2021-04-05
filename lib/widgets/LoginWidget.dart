@@ -12,7 +12,7 @@ class _LoginWidgetState extends State<LoginWidget> {
     return SafeArea(
       child: FlutterLogin(
         title: "دفترك",
-        logo: "assets/icon.jpg",
+        logo: "assets/images/icon.jpg",
         onSignup: (_) => Future(null),
         onLogin: (_) => Future(null),
         onRecoverPassword: (_) => Future(null),

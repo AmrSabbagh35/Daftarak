@@ -1,30 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:test_login/models/logic/operations.dart';
 
 class PlaceHolder extends StatelessWidget {
-  List<String> litems = [
-    "1",
-    "2",
-    "3",
-    "1",
-    "2",
-    "3",
-    "1",
-    "2",
-    "3",
-    "1",
-    "2",
-    "3",
-    "1",
-    "2",
-    "3",
-    "1",
-    "2",
-    "3",
-    "1",
-    "2",
-    "3",
-  ];
+  List<String> litems = ["title"];
 
   @override
   Widget build(BuildContext context) {
