@@ -34,7 +34,11 @@ dependencies:
   intl: ^0.17.0
   font_awesome_flutter: ^9.0.0
   path_provider: ^2.0.1
-  sqflite: ^2.0.0+3       
+  sqflite: ^2.0.0+3  
+  hijri: ^2.0.3
+  animated_splash_screen: ^1.0.1+2
+  page_transition: ^1.1.7+6  
+  avatar_glow: ^2.0.1  
 dev_dependencies:
   flutter_test:
     sdk: flutter

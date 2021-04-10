@@ -2,6 +2,7 @@ import 'package:animate_icons/animate_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:test_login/screens/Home_screen.dart';
+import 'package:test_login/screens/Profile_Screen.dart';
 import 'package:test_login/widgets/widget.dart';
 
 import 'Item_List.dart';
@@ -20,14 +21,12 @@ class _BottomNavState extends State<BottomNav> {
 
   int _currentIndex = 0;
   final List<Widget> _children = [
-    PlaceHolder(),
     Homescreen(),
+    PlaceHolder(),
     Container(
       color: Colors.blue,
     ),
-    Container(
-      color: Colors.red,
-    ),
+    Profile_Screen(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -60,18 +59,18 @@ class _BottomNavState extends State<BottomNav> {
             currentIndex: _currentIndex,
             items: [
               BottomNavigationBarItem(
-                icon: Icon(Icons.book, size: 30),
-                label: "Logs",
-                activeIcon: Icon(
-                  Icons.menu_book,
-                  size: 30,
-                ),
-              ),
-              BottomNavigationBarItem(
                 icon: Icon(Icons.home, size: 30),
                 label: "Home",
                 activeIcon: Icon(
                   Icons.home_outlined,
+                  size: 30,
+                ),
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.book, size: 30),
+                label: "Logs",
+                activeIcon: Icon(
+                  Icons.menu_book,
                   size: 30,
                 ),
               ),
@@ -84,7 +83,7 @@ class _BottomNavState extends State<BottomNav> {
                     Icons.calculate_outlined,
                     size: 30,
                   ),
-                  label: ""),
+                  label: "Add"),
               BottomNavigationBarItem(
                 icon: Icon(Icons.person, size: 30),
                 label: 'Profile',

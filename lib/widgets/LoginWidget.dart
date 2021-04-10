@@ -11,6 +11,7 @@ class _LoginWidgetState extends State<LoginWidget> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: FlutterLogin(
+        theme: LoginTheme(),
         title: "دفترك",
         logo: "assets/images/icon.jpg",
         onSignup: (_) => Future(null),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:test_login/widgets/Calendar_card.dart';
+import 'package:test_login/widgets/DailyBox_Card.dart';
 import 'package:test_login/widgets/Reminder_Card.dart';
 
 class Homescreen extends StatefulWidget {
@@ -11,14 +12,15 @@ class _HomescreenState extends State<Homescreen> {
   @override
   Widget build(BuildContext context) {
     final screensize = MediaQuery.of(context).size.height;
+    final screenwidth = MediaQuery.of(context).size.width;
     return SafeArea(
         child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         Padding(
-          padding: const EdgeInsets.all(18.0),
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
           child: Text(
-            "Welcome, \nSelect an option",
+            "Welcome, \nAt Your Service !",
             style: TextStyle(
                 color: Colors.black,
                 fontSize: 28.0,
@@ -27,7 +29,7 @@ class _HomescreenState extends State<Homescreen> {
           ),
         ),
         SizedBox(
-          height: 20,
+          height: 5,
         ),
         Column(
           children: [
@@ -47,11 +49,7 @@ class _HomescreenState extends State<Homescreen> {
               padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
               width: double.infinity,
               height: screensize / 5,
-              child: Card(
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20)),
-                elevation: 10,
-              ),
+              child: DailyBox_Card(),
             )
           ],
         )
