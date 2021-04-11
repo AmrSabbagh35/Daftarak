@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class Add_Screen extends StatefulWidget {
+class Logs_Screen extends StatefulWidget {
   @override
-  _Add_ScreenState createState() => _Add_ScreenState();
+  _Logs_ScreenState createState() => _Logs_ScreenState();
 }
 
-class _Add_ScreenState extends State<Add_Screen> {
+class _Logs_ScreenState extends State<Logs_Screen> {
   @override
   Widget build(BuildContext context) {
     final screenheight = MediaQuery.of(context).size.height;

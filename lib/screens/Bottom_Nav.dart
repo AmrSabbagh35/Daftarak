@@ -1,7 +1,7 @@
 import 'package:animate_icons/animate_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
-import 'package:test_login/screens/Add_Screen.dart';
+import 'package:test_login/screens/Logs_Screen.dart';
 import 'package:test_login/screens/Home_screen.dart';
 import 'package:test_login/screens/Profile_Screen.dart';
 import 'package:test_login/widgets/widget.dart';
@@ -23,8 +23,10 @@ class _BottomNavState extends State<BottomNav> {
   int _currentIndex = 0;
   final List<Widget> _children = [
     Homescreen(),
-    PlaceHolder(),
-    Add_Screen(),
+    Logs_Screen(),
+    Container(
+      color: Colors.blue,
+    ),
     Profile_Screen(),
   ];
   @override
