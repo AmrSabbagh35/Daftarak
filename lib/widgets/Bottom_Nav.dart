@@ -1,12 +1,5 @@
-import 'package:animate_icons/animate_icons.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_speed_dial/flutter_speed_dial.dart';
-import 'package:test_login/screens/Logs_Screen.dart';
-import 'package:test_login/screens/Home_screen.dart';
-import 'package:test_login/screens/Profile_Screen.dart';
-import 'package:test_login/widgets/widget.dart';
-
-import 'Item_List.dart';
+import 'package:test_login/screens/Nav_Bar_Pages/nav_screens.dart';
 
 class BottomNav extends StatefulWidget {
   @override

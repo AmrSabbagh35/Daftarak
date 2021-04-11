@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:test_login/widgets/widget.dart';
 
-import 'Bottom_Nav.dart';
+import '../../widgets/Bottom_Nav.dart';
 
 class LoginScreen extends StatefulWidget {
   @override

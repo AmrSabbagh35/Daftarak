@@ -51,7 +51,7 @@ class _Logs_ScreenState extends State<Logs_Screen> {
                   height: 140.0,
                   child: Card(
                     color: Colors.cyan[100],
-                    elevation: 10,
+                    elevation: 5,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20)),
                     child: InkWell(
@@ -86,7 +86,7 @@ class _Logs_ScreenState extends State<Logs_Screen> {
                   height: 140.0,
                   child: Card(
                     color: Colors.yellow[200],
-                    elevation: 10,
+                    elevation: 5,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20)),
                     child: InkWell(
@@ -121,7 +121,7 @@ class _Logs_ScreenState extends State<Logs_Screen> {
                   height: 140.0,
                   child: Card(
                     color: Colors.green[300],
-                    elevation: 10,
+                    elevation: 5,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20)),
                     child: InkWell(
@@ -156,7 +156,7 @@ class _Logs_ScreenState extends State<Logs_Screen> {
                   height: 140.0,
                   child: Card(
                     color: Colors.blueGrey[200],
-                    elevation: 10,
+                    elevation: 5,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20)),
                     child: InkWell(
@@ -189,9 +189,6 @@ class _Logs_ScreenState extends State<Logs_Screen> {
               ],
             ),
           ),
-        ),
-        Divider(
-          thickness: 2,
         ),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 5),
@@ -226,10 +223,11 @@ class _Logs_ScreenState extends State<Logs_Screen> {
               margin: EdgeInsets.all(10),
               width: screenwidth / 3,
               child: Card(
-                color: Colors.red[200],
+                color: Colors.pink[100],
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20)),
                 elevation: 5,
+                child: InkWell(),
               ),
             ),
             Container(
@@ -237,7 +235,7 @@ class _Logs_ScreenState extends State<Logs_Screen> {
               margin: EdgeInsets.all(10),
               width: screenwidth / 3,
               child: Card(
-                color: Colors.red[200],
+                color: Colors.blue[200],
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20)),
                 elevation: 5,
