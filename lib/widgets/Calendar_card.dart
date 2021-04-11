@@ -80,7 +80,8 @@ class _CalenderCardState extends State<CalenderCard> {
                     // width: screensize / 5,
                     // child:
                     child: Container(
-                      color: Colors.white,
+                      decoration: BoxDecoration(
+                          border: Border.all(color: Colors.grey[400])),
                       child: Column(
                         children: [
                           SizedBox(

@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:test_login/widgets/Calendar_card.dart';
-import 'package:test_login/widgets/DailyBox_Card.dart';
-import 'package:test_login/widgets/Reminder_Card.dart';
+import 'package:test_login/widgets/widget.dart';
 
 class Homescreen extends StatefulWidget {
   @override

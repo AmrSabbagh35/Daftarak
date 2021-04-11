@@ -45,14 +45,14 @@ class _DailyBox_CardState extends State<DailyBox_Card> {
               ),
             ],
           ),
-          Positioned(
-              top: 0,
-              bottom: 0,
-              right: screensize / 4,
-              left: 0,
-              child: VerticalDivider(
-                thickness: 2,
-              )),
+          // Positioned(
+          //     top: 0,
+          //     bottom: 0,
+          //     right: screensize / 4,
+          //     left: 0,
+          //     child: VerticalDivider(
+          //       thickness: 2,
+          //     )),
           // Positioned(
           //     top: 20,
           //     right: screewidth / 2 - 20,

@@ -65,10 +65,13 @@ Widget _buildItem(String title, String subtitle) {
     child: Column(
       children: [
         Card(
+          margin: EdgeInsets.all(10),
           elevation: 5,
           child: ListTile(
             title: Text(title),
             subtitle: Text(subtitle),
+            trailing: Icon(Icons.ac_unit),
+            // dense: true,
           ),
         ),
         // Divider(),

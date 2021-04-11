@@ -20,7 +20,7 @@ class _Profile_ScreenState extends State<Profile_Screen> {
                   bottomRight: Radius.circular(50),
                   bottomLeft: Radius.circular(50)),
             ),
-            elevation: 20,
+            elevation: 15,
             child: Container(
               height: screenHeight / 3,
               width: double.infinity,
@@ -119,11 +119,19 @@ class _Profile_ScreenState extends State<Profile_Screen> {
               ),
             ),
           ),
-          Container(
-            width: double.infinity,
-            height: 30,
-            child: Card(
-              elevation: 20,
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+            child: Container(
+              width: double.infinity,
+              height: 100,
+              decoration:
+                  BoxDecoration(borderRadius: BorderRadius.circular(10)),
+              child: Card(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(50)),
+                elevation: 10,
+                clipBehavior: Clip.antiAlias,
+              ),
             ),
           ),
         ],

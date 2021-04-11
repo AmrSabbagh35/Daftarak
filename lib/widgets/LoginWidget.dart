@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_login/flutter_login.dart';
 
@@ -11,7 +13,43 @@ class _LoginWidgetState extends State<LoginWidget> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: FlutterLogin(
-        theme: LoginTheme(),
+        theme: LoginTheme(
+            accentColor: Colors.white,
+            footerTextStyle:
+                TextStyle(color: Colors.white, fontWeight: FontWeight.w500),
+            bodyStyle:
+                TextStyle(color: Colors.white, fontWeight: FontWeight.w500),
+            inputTheme: InputDecorationTheme(
+              fillColor: Colors.white,
+              labelStyle: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.w500,
+                  fontSize: 17),
+              helperStyle:
+                  TextStyle(color: Colors.white, fontWeight: FontWeight.w500),
+              prefixStyle: TextStyle(
+                  backgroundColor: Colors.white, fontWeight: FontWeight.w500),
+              suffixStyle: TextStyle(
+                  backgroundColor: Colors.white, fontWeight: FontWeight.w500),
+              hintStyle:
+                  TextStyle(color: Colors.white, fontWeight: FontWeight.w500),
+            ),
+            beforeHeroFontSize: 30,
+            primaryColor: Color.fromRGBO(23, 33, 42, 1),
+            textFieldStyle:
+                TextStyle(fontWeight: FontWeight.w500, color: Colors.white),
+            cardTheme: CardTheme(
+              clipBehavior: Clip.antiAlias,
+              color: Color.fromRGBO(44, 47, 51, 1),
+              elevation: 10,
+              margin: EdgeInsets.all(20),
+            ),
+            buttonTheme: LoginButtonTheme(
+                backgroundColor: Colors.cyan,
+                elevation: 5,
+                splashColor: Colors.cyan[200],
+                highlightColor: Colors.cyan[400],
+                highlightElevation: 6)),
         title: "دفترك",
         logo: "assets/images/icon.jpg",
         onSignup: (_) => Future(null),
@@ -22,7 +60,7 @@ class _LoginWidgetState extends State<LoginWidget> {
           passwordHint: 'Password',
           confirmPasswordHint: 'Confirm Your Password',
           loginButton: 'Log In',
-          signupButton: 'Register',
+          signupButton: '',
           forgotPasswordButton: 'Forgot Password ?',
           recoverPasswordButton: 'Help',
           goBackButton: 'Go Back',

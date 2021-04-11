@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Login Screen',
+        // theme: ThemeData.dark(),
         home: AnimatedSplashScreen(
             splash: Icons.menu_book,
             duration: 100,
@@ -20,3 +21,15 @@ class MyApp extends StatelessWidget {
             nextScreen: LoginScreen()));
   }
 }
+
+ThemeData _darkTheme = ThemeData(
+  primaryTextTheme: TextTheme(),
+  accentColor: Colors.white,
+  brightness: Brightness.dark,
+  primaryColor: Colors.amber,
+);
+
+ThemeData _lightTheme = ThemeData(
+    accentColor: Colors.pink,
+    brightness: Brightness.light,
+    primaryColor: Colors.blue);
