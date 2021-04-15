@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class DailyBox_Card extends StatefulWidget {
   @override
@@ -36,7 +37,7 @@ class _DailyBox_CardState extends State<DailyBox_Card> {
             children: [
               Container(
                 color: Color.fromRGBO(76, 179, 74, 0.7),
-                height: double.infinity,
+                height: double.infinity.h,
                 width: 95,
                 child: Icon(
                   Icons.arrow_drop_up_outlined,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:test_login/widgets/widget.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Homescreen extends StatefulWidget {
   @override
@@ -9,8 +10,6 @@ class Homescreen extends StatefulWidget {
 class _HomescreenState extends State<Homescreen> {
   @override
   Widget build(BuildContext context) {
-    final screensize = MediaQuery.of(context).size.height;
-    final screenwidth = MediaQuery.of(context).size.width;
     return SafeArea(
         child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -27,26 +26,26 @@ class _HomescreenState extends State<Homescreen> {
           ),
         ),
         SizedBox(
-          height: 5,
+          height: 5.h,
         ),
         Column(
           children: [
             Container(
               padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
-              height: screensize / 5,
-              width: double.infinity,
+              height: ScreenUtil().screenHeight / 5,
+              width: double.infinity.w,
               child: CalenderCard(),
             ),
             Container(
               padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
-              width: double.infinity,
-              height: screensize / 5,
+              width: double.infinity.w,
+              height: ScreenUtil().screenHeight / 5,
               child: RemindersCard(),
             ),
             Container(
               padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
-              width: double.infinity,
-              height: screensize / 5,
+              width: double.infinity.w,
+              height: ScreenUtil().screenHeight / 5,
               child: DailyBox_Card(),
             )
           ],

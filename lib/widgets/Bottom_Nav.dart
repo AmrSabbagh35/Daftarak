@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:test_login/screens/Nav_Bar_Pages/nav_screens.dart';
 
 class BottomNav extends StatefulWidget {
@@ -20,6 +21,7 @@ class _BottomNavState extends State<BottomNav> {
     Container(
       color: Colors.blue,
     ),
+    Warehouse_screen(),
     Profile_Screen(),
   ];
   @override
@@ -78,6 +80,16 @@ class _BottomNavState extends State<BottomNav> {
                     size: 30,
                   ),
                   label: "Add"),
+              BottomNavigationBarItem(
+                  icon: Icon(
+                    Icons.local_shipping,
+                    size: 30,
+                  ),
+                  activeIcon: Icon(
+                    Icons.local_shipping_outlined,
+                    size: 30,
+                  ),
+                  label: "Warehouse"),
               BottomNavigationBarItem(
                 icon: Icon(Icons.person, size: 30),
                 label: 'Profile',

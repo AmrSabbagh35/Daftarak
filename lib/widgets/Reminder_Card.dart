@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:test_login/screens/Todo_Pages/todo_screens.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class RemindersCard extends StatefulWidget {
   @override
@@ -22,7 +23,7 @@ class _RemindersCardState extends State<RemindersCard> {
         child: Stack(children: [
           Positioned(
               top: 10,
-              left: 320,
+              left: 330,
               child: CircleAvatar(
                 radius: 25,
                 backgroundColor: Colors.yellow[200],
@@ -35,13 +36,13 @@ class _RemindersCardState extends State<RemindersCard> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(
-                height: 20,
+                height: 20.h,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   SizedBox(
-                    width: 10,
+                    width: 10.w,
                   ),
                   Container(
                     decoration:

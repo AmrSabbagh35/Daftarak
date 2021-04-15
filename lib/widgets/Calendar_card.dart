@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hijri/hijri_calendar.dart';
 import 'package:intl/intl.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CalenderCard extends StatefulWidget {
   @override
@@ -85,7 +86,7 @@ class _CalenderCardState extends State<CalenderCard> {
                       child: Column(
                         children: [
                           SizedBox(
-                            height: 20,
+                            height: 20.h,
                           ),
                           Text(
                             '$monthformatted',
@@ -93,7 +94,7 @@ class _CalenderCardState extends State<CalenderCard> {
                                 fontSize: 30, fontWeight: FontWeight.w400),
                           ),
                           SizedBox(
-                            height: 10,
+                            height: 10.h,
                           ),
                           Text(
                             dayformatted,
@@ -118,7 +119,7 @@ class _CalenderCardState extends State<CalenderCard> {
                       child: Column(
                         children: [
                           SizedBox(
-                            height: 20,
+                            height: 20.h,
                           ),
                           Text(
                             h_date.toFormat(' MMMM'),
@@ -126,7 +127,7 @@ class _CalenderCardState extends State<CalenderCard> {
                                 fontSize: 30, fontWeight: FontWeight.w400),
                           ),
                           SizedBox(
-                            height: 10,
+                            height: 10.h,
                           ),
                           Text(
                             h_date.toFormat('dd'),

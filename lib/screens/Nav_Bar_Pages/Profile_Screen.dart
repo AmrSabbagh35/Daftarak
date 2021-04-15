@@ -1,5 +1,6 @@
 import 'package:avatar_glow/avatar_glow.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Profile_Screen extends StatefulWidget {
   @override
@@ -7,9 +8,13 @@ class Profile_Screen extends StatefulWidget {
 }
 
 class _Profile_ScreenState extends State<Profile_Screen> {
+  int _currentIndex = 0;
+  final List<Widget> _children = [];
+
   @override
   Widget build(BuildContext context) {
     final screenHeight = MediaQuery.of(context).size.height;
+
     return Scaffold(
       body: Column(
         children: [
@@ -20,7 +25,7 @@ class _Profile_ScreenState extends State<Profile_Screen> {
                   bottomRight: Radius.circular(50),
                   bottomLeft: Radius.circular(50)),
             ),
-            elevation: 15,
+            elevation: 10,
             child: Container(
               height: screenHeight / 3,
               width: double.infinity,
@@ -41,7 +46,7 @@ class _Profile_ScreenState extends State<Profile_Screen> {
                     repeat: true,
                     showTwoGlows: true,
                     repeatPauseDuration: Duration(milliseconds: 100),
-                    glowColor: Colors.red,
+                    glowColor: Colors.blue,
                     child: CircleAvatar(
                       radius: 40,
                       backgroundColor: Colors.white,
@@ -119,21 +124,61 @@ class _Profile_ScreenState extends State<Profile_Screen> {
               ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-            child: Container(
-              width: double.infinity,
-              height: 100,
-              decoration:
-                  BoxDecoration(borderRadius: BorderRadius.circular(10)),
-              child: Card(
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(50)),
-                elevation: 10,
-                clipBehavior: Clip.antiAlias,
-              ),
-            ),
+          SizedBox(
+            height: 20.h,
           ),
+          Column(
+            children: [
+              Container(
+                  width: double.infinity.w,
+                  height: ScreenUtil().screenHeight / 10 + 10,
+                  child: Card(
+                    elevation: 10,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Row(
+                          children: [
+                            SizedBox(
+                              width: 20.w,
+                            ),
+                            Text('Name : ',
+                                style: TextStyle(
+                                    color: Colors.grey,
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w400)),
+                          ],
+                        ),
+                      ],
+                    ),
+                  )),
+              Container(
+                  width: double.infinity.w,
+                  height: ScreenUtil().screenHeight / 10 + 10,
+                  child: Card(
+                    elevation: 10,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Row(
+                          children: [
+                            SizedBox(
+                              width: 20.w,
+                            ),
+                            Text('Name : ',
+                                style: TextStyle(
+                                    color: Colors.grey,
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w400)),
+                          ],
+                        ),
+                      ],
+                    ),
+                  )),
+            ],
+          )
         ],
       ),
     );

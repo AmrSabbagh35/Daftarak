@@ -40,6 +40,8 @@ dependencies:
   page_transition: ^1.1.7+6  
   avatar_glow: ^2.0.1  
   flutter_screenutil: ^5.0.0  
+  hexcolor: ^2.0.3
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

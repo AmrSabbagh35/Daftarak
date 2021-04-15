@@ -12,6 +12,19 @@ class _LoginWidgetState extends State<LoginWidget> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: FlutterLogin(
+        emailValidator: (value) {
+          if (!value.contains(' ')) {
+            return "Username is not correct";
+          }
+          return null;
+        },
+
+        passwordValidator: (value) {
+          if (value.isEmpty) {
+            return 'Password is empty';
+          }
+          return null;
+        },
         theme: LoginTheme(
             accentColor: Colors.white,
             footerTextStyle:

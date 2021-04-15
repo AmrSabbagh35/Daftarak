@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:test_login/screens/Logs_Pages/Daily_Logs.dart';
 
 class Logs_Screen extends StatefulWidget {
   @override
@@ -19,19 +20,19 @@ class _Logs_ScreenState extends State<Logs_Screen> {
           child: Card(
             color: Colors.indigo[300],
             elevation: 2,
-            shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.only(
-                    topRight: Radius.circular(40),
-                    bottomRight: Radius.circular(40))),
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(40)),
             child: Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Text(
-                "Check Your Logs",
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 28.0,
-                    fontWeight: FontWeight.bold),
-                textAlign: TextAlign.start,
+              child: Center(
+                child: Text(
+                  "Check Your Logs",
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 28.0,
+                      fontWeight: FontWeight.bold),
+                  textAlign: TextAlign.start,
+                ),
               ),
             ),
           ),
@@ -56,21 +57,21 @@ class _Logs_ScreenState extends State<Logs_Screen> {
                         borderRadius: BorderRadius.circular(20)),
                     child: InkWell(
                       splashColor: Colors.cyan[300],
-                      onTap: () => print('object'),
+                      onTap: () => Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => DailyLogs())),
                       child: Center(
                           child: Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
                           children: <Widget>[
-                            SizedBox(
-                              height: 10.0,
-                            ),
                             Text(
                               "Daily",
                               style: TextStyle(
                                   color: Colors.black,
                                   fontWeight: FontWeight.bold,
-                                  fontSize: 20.0),
+                                  fontSize: 25.0),
                             ),
                             SizedBox(
                               height: 5.0,
@@ -96,16 +97,15 @@ class _Logs_ScreenState extends State<Logs_Screen> {
                           child: Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
                           children: <Widget>[
-                            SizedBox(
-                              height: 10.0,
-                            ),
                             Text(
                               "Monthly",
                               style: TextStyle(
                                   color: Colors.black,
                                   fontWeight: FontWeight.bold,
-                                  fontSize: 20.0),
+                                  fontSize: 25.0),
                             ),
                             SizedBox(
                               height: 5.0,
@@ -131,16 +131,15 @@ class _Logs_ScreenState extends State<Logs_Screen> {
                           child: Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
                           children: <Widget>[
-                            SizedBox(
-                              height: 10.0,
-                            ),
                             Text(
                               "Yearly",
                               style: TextStyle(
                                   color: Colors.black,
                                   fontWeight: FontWeight.bold,
-                                  fontSize: 20.0),
+                                  fontSize: 25.0),
                             ),
                             SizedBox(
                               height: 5.0,
@@ -166,16 +165,15 @@ class _Logs_ScreenState extends State<Logs_Screen> {
                           child: Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
                           children: <Widget>[
-                            SizedBox(
-                              height: 10.0,
-                            ),
                             Text(
                               "All",
                               style: TextStyle(
                                   color: Colors.black,
                                   fontWeight: FontWeight.bold,
-                                  fontSize: 20.0),
+                                  fontSize: 25.0),
                             ),
                             SizedBox(
                               height: 5.0,
@@ -195,54 +193,103 @@ class _Logs_ScreenState extends State<Logs_Screen> {
           child: Card(
             color: Colors.red[300],
             elevation: 2,
-            shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.only(
-                    topRight: Radius.circular(40),
-                    bottomRight: Radius.circular(40))),
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(40)),
             child: Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Text(
-                "Check Your Debts",
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 28.0,
-                    fontWeight: FontWeight.bold),
-                textAlign: TextAlign.start,
+              child: Center(
+                child: Text(
+                  "Check Your Debts",
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 28.0,
+                      fontWeight: FontWeight.bold),
+                  textAlign: TextAlign.start,
+                ),
               ),
             ),
           ),
         ),
-        // SizedBox(
-        //   height: 10,
-        // ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            Container(
-              height: 140,
-              margin: EdgeInsets.all(10),
-              width: screenwidth / 3,
-              child: Card(
-                color: Colors.pink[100],
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20)),
-                elevation: 5,
-                child: InkWell(),
-              ),
+        Padding(
+          padding: const EdgeInsets.all(12.0),
+          child: Center(
+            child: Wrap(
+              spacing: 20,
+              runSpacing: 20.0,
+              children: <Widget>[
+                SizedBox(
+                  width: 140.0,
+                  height: 140.0,
+                  child: Card(
+                    color: Colors.cyan[100],
+                    elevation: 5,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20)),
+                    child: InkWell(
+                      splashColor: Colors.cyan[300],
+                      onTap: () => Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => DailyLogs())),
+                      child: Center(
+                          child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: <Widget>[
+                            Text(
+                              "مدين",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 25.0),
+                            ),
+                            SizedBox(
+                              height: 5.0,
+                            ),
+                          ],
+                        ),
+                      )),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  width: 140.0,
+                  height: 140.0,
+                  child: Card(
+                    color: Colors.yellow[200],
+                    elevation: 5,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20)),
+                    child: InkWell(
+                      splashColor: Colors.yellow,
+                      onTap: () => print('object'),
+                      child: Center(
+                          child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: <Widget>[
+                            Text(
+                              "دائن",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 25.0),
+                            ),
+                            SizedBox(
+                              height: 5.0,
+                            ),
+                          ],
+                        ),
+                      )),
+                    ),
+                  ),
+                ),
+              ],
             ),
-            Container(
-              height: 140,
-              margin: EdgeInsets.all(10),
-              width: screenwidth / 3,
-              child: Card(
-                color: Colors.blue[200],
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20)),
-                elevation: 5,
-              ),
-            ),
-          ],
-        )
+          ),
+        ),
       ],
     ));
   }

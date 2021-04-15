@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:test_login/helpers/database_help.dart';
 import 'package:test_login/models/Tasks/Tasks.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AddTaskScreen extends StatefulWidget {
   final Function updateTaskList;
@@ -99,7 +100,7 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
                     color: Colors.green[300],
                   ),
                 ),
-                SizedBox(height: 20),
+                SizedBox(height: 20.h),
                 Text(
                   widget.task == null ? 'Add a Task :' : 'Update Task',
                   style: TextStyle(
@@ -177,8 +178,8 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
                       ),
                       Container(
                         margin: EdgeInsets.symmetric(vertical: 20),
-                        height: 60,
-                        width: double.infinity,
+                        height: 60.h,
+                        width: double.infinity.w,
                         decoration: BoxDecoration(
                           color: Colors.green[200],
                           borderRadius: BorderRadius.circular(30),
@@ -194,8 +195,8 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
                       widget.task != null
                           ? Container(
                               margin: EdgeInsets.symmetric(vertical: 20),
-                              height: 60,
-                              width: double.infinity,
+                              height: 60.h,
+                              width: double.infinity.w,
                               decoration: BoxDecoration(
                                 color: Colors.green[200],
                                 borderRadius: BorderRadius.circular(30),

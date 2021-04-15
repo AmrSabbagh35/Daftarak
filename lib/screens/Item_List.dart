@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:test_login/models/logic/operations.dart';
 
 class PlaceHolder extends StatefulWidget {
   @override

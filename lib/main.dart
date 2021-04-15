@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:test_login/screens/Nav_Bar_Pages/Home_screen.dart';
 import 'package:test_login/screens/Login_Pages/Login_screen.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   @override

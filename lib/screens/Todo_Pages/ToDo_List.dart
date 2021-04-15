@@ -3,6 +3,7 @@ import 'package:intl/intl.dart';
 import 'package:test_login/helpers/database_help.dart';
 import 'package:test_login/models/Tasks/Tasks.dart';
 import 'package:test_login/screens/ToDo_Pages/Add_task.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class TodoList extends StatefulWidget {
   @override
@@ -115,7 +116,7 @@ class _TodoListState extends State<TodoList> {
                               fontSize: 40,
                               fontWeight: FontWeight.bold),
                         ),
-                        SizedBox(height: 10),
+                        SizedBox(height: 10.h),
                         Text(
                           '$completedTasksCount of ${snapshot.data.length}',
                           style: TextStyle(
