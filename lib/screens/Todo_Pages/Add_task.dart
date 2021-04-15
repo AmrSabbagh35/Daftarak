@@ -95,9 +95,17 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
                   onTap: () {
                     Navigator.pop(context);
                   },
-                  child: Icon(
-                    Icons.arrow_back_ios,
-                    color: Colors.green[300],
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Icon(
+                        Icons.arrow_back_ios,
+                        color: Colors.green[300],
+                      ),
+                      Text('Back',
+                          style: TextStyle(
+                              fontSize: 20, color: Colors.green[300])),
+                    ],
                   ),
                 ),
                 SizedBox(height: 20.h),

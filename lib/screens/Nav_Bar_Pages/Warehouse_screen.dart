@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:test_login/screens/Warehouse_pages/Add_Product.dart';
+import 'package:test_login/screens/Warehouse_pages/Refill.dart';
 import 'package:test_login/screens/Warehouse_pages/View_Products.dart';
 
 class Warehouse_screen extends StatefulWidget {
@@ -150,7 +151,10 @@ class _Warehouse_screenState extends State<Warehouse_screen> {
                         borderRadius: BorderRadius.circular(20)),
                     child: InkWell(
                       splashColor: Colors.green[400],
-                      onTap: () => print('object'),
+                      onTap: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => Refill_Screen())),
                       child: Center(
                           child: Padding(
                         padding: const EdgeInsets.all(8.0),
@@ -161,7 +165,7 @@ class _Warehouse_screenState extends State<Warehouse_screen> {
                             Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Text(
-                                "Products Log",
+                                "Refill",
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                     color: Colors.black,

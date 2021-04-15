@@ -5,9 +5,9 @@ import 'package:test_login/models/Warehouse/product.dart';
 import 'package:test_login/models/Warehouse/subcategory.dart';
 
 class Add_Product extends StatefulWidget {
-  final Product product;
+  Product product;
 
-  const Add_Product({Key key, this.product}) : super(key: key);
+  Add_Product({Key key, this.product}) : super(key: key);
   @override
   _Add_ProductState createState() => _Add_ProductState();
 }
@@ -16,6 +16,7 @@ class _Add_ProductState extends State<Add_Product> {
   TextEditingController _textFieldController = TextEditingController();
   TextEditingController _textFieldController2 = TextEditingController();
   final _formkey = GlobalKey<FormState>();
+  final _innerformkey = GlobalKey<FormState>();
   List<String> categoryitems = [];
   List<String> subcategoryitems = [];
   String _chosenvalue;
@@ -39,22 +40,6 @@ class _Add_ProductState extends State<Add_Product> {
 
   @override
   Widget build(BuildContext context) {
-    _addButton() {
-      if (_formkey.currentState.validate()) {
-        _formkey.currentState.save();
-        Product product = Product(name: _name, minAmount: _minAmount);
-        product.id = widget.product.id;
-        Navigator.of(context).pop();
-      }
-    }
-
-    _addCategory() {
-      categoryitems.insert(1, _textFieldController.text);
-      _chosenvalue = _textFieldController.text;
-      _textFieldController.clear();
-      Navigator.pop(context);
-    }
-
     Future<void> _displayCategoryDialog(BuildContext context) async {
       return showDialog(
           context: context,
@@ -79,11 +64,15 @@ class _Add_ProductState extends State<Add_Product> {
                   },
                 ),
                 FlatButton(
-                  color: Colors.green,
-                  textColor: Colors.white,
-                  child: Text('OK'),
-                  onPressed: _addCategory(),
-                ),
+                    color: Colors.green,
+                    textColor: Colors.white,
+                    child: Text('OK'),
+                    onPressed: () {
+                      categoryitems.insert(1, _textFieldController.text);
+                      _chosenvalue = _textFieldController.text;
+                      _textFieldController.clear();
+                      Navigator.pop(context);
+                    }),
               ],
             );
           });
@@ -97,9 +86,16 @@ class _Add_ProductState extends State<Add_Product> {
               title: Text('Add a Sub Product'),
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadiusDirectional.circular(20)),
-              content: TextField(
-                controller: _textFieldController2,
-                decoration: InputDecoration(hintText: "Enter Your Sub Product"),
+              content: Form(
+                child: TextFormField(
+                  validator: (input) => input.trim().isEmpty
+                      ? 'Please Enter a Sub Category Name !'
+                      : null,
+                  controller: _textFieldController2,
+                  decoration:
+                      InputDecoration(hintText: "Enter Your Sub Product"),
+                ),
+                key: _innerformkey,
               ),
               actions: <Widget>[
                 FlatButton(
@@ -118,9 +114,9 @@ class _Add_ProductState extends State<Add_Product> {
                   child: Text('OK'),
                   onPressed: () {
                     setState(() {
-                      subcategoryitems.insert(0, _textFieldController2.text);
+                      subcategoryitems.insert(1, _textFieldController2.text);
                       _chosenvalue2 = _textFieldController2.text;
-                      _textFieldController.clear();
+                      _textFieldController2.clear();
                       Navigator.pop(context);
                     });
                   },
@@ -145,9 +141,17 @@ class _Add_ProductState extends State<Add_Product> {
                     onTap: () {
                       Navigator.pop(context);
                     },
-                    child: Icon(
-                      Icons.arrow_back_ios,
-                      color: Colors.blue[600],
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Icon(
+                          Icons.arrow_back_ios,
+                          color: Colors.blue[600],
+                        ),
+                        Text('Back',
+                            style: TextStyle(
+                                fontSize: 20, color: Colors.blue[600])),
+                      ],
                     ),
                   ),
                   SizedBox(
@@ -243,7 +247,7 @@ class _Add_ProductState extends State<Add_Product> {
                               onChanged: (String value) {
                                 setState(() {
                                   _chosenvalue2 = value;
-                                  if (value == subcategoryitems.last) {
+                                  if (value == subcategoryitems.first) {
                                     _displaySubCategoryDialog(context);
                                   }
                                 });
@@ -274,7 +278,15 @@ class _Add_ProductState extends State<Add_Product> {
                               color: Colors.blue[100],
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(30)),
-                              onPressed: () => _addButton(),
+                              onPressed: () {
+                                if (_formkey.currentState.validate()) {
+                                  _formkey.currentState.save();
+                                  Product product = Product(
+                                      name: _name, minAmount: _minAmount);
+                                  product.id = widget.product.id;
+                                  Navigator.of(context).pop();
+                                }
+                              },
                               child: Text(
                                 'Add',
                                 style: TextStyle(fontSize: 20),
