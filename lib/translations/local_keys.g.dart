@@ -36,5 +36,20 @@ abstract class  LocaleKeys {
   static const Login_cnfrm_pass = 'Login.cnfrm_pass';
   static const Login_frgt_pass = 'Login.frgt_pass';
   static const Login = 'Login';
+  static const Tasks_tasks_text = 'Tasks.tasks_text';
+  static const Tasks_add_task = 'Tasks.add_task';
+  static const Tasks_task_title = 'Tasks.task_title';
+  static const Tasks_task_date = 'Tasks.task_date';
+  static const Tasks_task_priority = 'Tasks.task_priority';
+  static const Tasks_task_add = 'Tasks.task_add';
+  static const Tasks_task_update = 'Tasks.task_update';
+  static const Tasks_task_delete = 'Tasks.task_delete';
+  static const Tasks_task_prio_Low = 'Tasks.task_prio_Low';
+  static const Tasks_task_prio_Med = 'Tasks.task_prio_Med';
+  static const Tasks_task_prio_high = 'Tasks.task_prio_high';
+  static const Tasks_back_button = 'Tasks.back_button';
+  static const Tasks_enter_title = 'Tasks.enter_title';
+  static const Tasks_enter_prio_validation = 'Tasks.enter_prio_validation';
+  static const Tasks = 'Tasks';
 
 }

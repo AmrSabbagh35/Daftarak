@@ -132,57 +132,60 @@ class _Profile_ScreenState extends State<Profile_Screen> {
           SizedBox(
             height: 20.h,
           ),
-          Column(
-            children: [
-              Container(
-                  width: double.infinity.w,
-                  height: ScreenUtil().screenHeight / 10 + 10,
-                  child: Card(
-                    elevation: 10,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Row(
-                          children: [
-                            SizedBox(
-                              width: 20.w,
-                            ),
-                            Text('Name : ',
-                                style: TextStyle(
-                                    color: Colors.grey,
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.w400)),
-                          ],
-                        ),
-                      ],
-                    ),
-                  )),
-              Container(
-                  width: double.infinity.w,
-                  height: ScreenUtil().screenHeight / 10 + 10,
-                  child: Card(
-                    elevation: 10,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Row(
-                          children: [
-                            SizedBox(
-                              width: 20.w,
-                            ),
-                            Text('Name : ',
-                                style: TextStyle(
-                                    color: Colors.grey,
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.w400)),
-                          ],
-                        ),
-                      ],
-                    ),
-                  )),
-            ],
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Column(
+              children: [
+                Container(
+                    width: double.infinity.w,
+                    height: ScreenUtil().screenHeight / 10 + 10,
+                    child: Card(
+                      elevation: 10,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Row(
+                            children: [
+                              SizedBox(
+                                width: 20.w,
+                              ),
+                              Text('Name : ',
+                                  style: TextStyle(
+                                      color: Colors.grey,
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.w400)),
+                            ],
+                          ),
+                        ],
+                      ),
+                    )),
+                Container(
+                    width: double.infinity.w,
+                    height: ScreenUtil().screenHeight / 10 + 10,
+                    child: Card(
+                      elevation: 10,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Row(
+                            children: [
+                              SizedBox(
+                                width: 20.w,
+                              ),
+                              Text('Name : ',
+                                  style: TextStyle(
+                                      color: Colors.grey,
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.w400)),
+                            ],
+                          ),
+                        ],
+                      ),
+                    )),
+              ],
+            ),
           )
         ],
       ),

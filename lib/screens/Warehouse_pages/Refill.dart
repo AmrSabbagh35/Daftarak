@@ -108,9 +108,12 @@ class _Refill_ScreenState extends State<Refill_Screen> {
                           Icons.arrow_back_ios,
                           color: Colors.blue[600],
                         ),
-                        Text('Back',
-                            style: TextStyle(
-                                fontSize: 20, color: Colors.blue[600])),
+                        InkWell(
+                          onTap: () => Navigator.pop(context),
+                          child: Text('Back',
+                              style: TextStyle(
+                                  fontSize: 20, color: Colors.blue[600])),
+                        ),
                         SizedBox(
                           width: 70,
                         ),

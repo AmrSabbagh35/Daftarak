@@ -3,6 +3,7 @@ import 'package:hijri/hijri_calendar.dart';
 import 'package:intl/intl.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:easy_localization/easy_localization.dart';
+import 'package:intl/date_symbol_data_local.dart';
 
 class CalenderCard extends StatefulWidget {
   @override
@@ -24,127 +25,120 @@ class _CalenderCardState extends State<CalenderCard> {
   final String yearformatted = yearformatter.format(now);
 
   var h_date = HijriCalendar.fromDate(DateTime.now());
+  var currentHijri = HijriCalendar.now().hMonth;
+
+  String getHijri() {
+    switch (currentHijri) {
+      case 1:
+        return "محرم";
+        break;
+      case 2:
+        return "صفر";
+        break;
+      case 3:
+        return "ربيع الأول";
+        break;
+      case 4:
+        return "ربيع الثاني";
+        break;
+      case 5:
+        return "جمادى الأولى";
+        break;
+      case 6:
+        return "جمادى الثانية";
+        break;
+      case 7:
+        return "رجب";
+        break;
+      case 8:
+        return "شعبان";
+        break;
+      case 9:
+        return "رمضان";
+        break;
+      case 10:
+        return "شوال";
+        break;
+      case 11:
+        return "ذو القعدة";
+        break;
+      case 12:
+        return "ذو الحجة";
+        break;
+
+      default:
+        return "error";
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final screensize = MediaQuery.of(context).size.width;
     final screewidth = MediaQuery.of(context).size.width;
-    return Stack(
-      alignment: Alignment.topCenter,
-      children: <Widget>[
-        Card(
-          clipBehavior: Clip.antiAliasWithSaveLayer,
-          shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-          elevation: 10,
-          child: Stack(
-            children: <Widget>[
-              // Positioned(
-              //   top: screensize / 75,
-              //   left: screewidth / 75,
-              //   child: CircleAvatar(
-              //     backgroundColor: Colors.red,
-              //     radius: 20,
-              //     child: Text(
-              //       yearformatted,
-              //       style: TextStyle(
-              //           color: Colors.black, fontWeight: FontWeight.bold),
-              //     ),
-              //   ),
-              // ),
-              // Positioned(
-              //   right: screensize / 75,
-              //   top: screewidth / 75,
-              //   child: CircleAvatar(
-              //     backgroundColor: Colors.transparent,
-              //     radius: 20,
-              //     child: Text(
-              //       h_date.hYear.toString(),
-              //       style: TextStyle(
-              //           color: Colors.black, fontWeight: FontWeight.bold),
-              //     ),
-              //   ),
-              // ),
-              // Positioned(
-              //   top: 0,
-              //   bottom: 0,
-              //   right: screensize / 50,
-              //   left: 0,
-              //   child: VerticalDivider(
-              //     thickness: 2,
-              //   ),
-              // ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+    return Card(
+      clipBehavior: Clip.antiAliasWithSaveLayer,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+      elevation: 10,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          Expanded(
+            child: Container(
+              decoration:
+                  BoxDecoration(border: Border.all(color: Colors.grey[400])),
+              child: Column(
                 children: [
-                  Expanded(
-                    //                 child: Container(
-                    // height: screensize / 2,
-                    // width: screensize / 5,
-                    // child:
-                    child: Container(
-                      decoration: BoxDecoration(
-                          border: Border.all(color: Colors.grey[400])),
-                      child: Column(
-                        children: [
-                          SizedBox(
-                            height: 20.h,
-                          ),
-                          Text(
-                            '$monthformatted',
-                            style: TextStyle(
-                                fontSize: 30, fontWeight: FontWeight.w400),
-                          ),
-                          SizedBox(
-                            height: 10.h,
-                          ),
-                          Text(
-                            dayformatted,
-                            style: TextStyle(
-                                fontSize: 25, fontWeight: FontWeight.w400),
-                          ),
-                        ],
-                      ),
-                    ),
+                  SizedBox(
+                    height: 20.h,
                   ),
-                  // Container(
-                  //   child:
-
-                  Expanded(
-                    child: Container(
-                      color: Colors.green[200],
-                      // decoration: BoxDecoration(
-                      //     gradient: LinearGradient(colors: [
-                      //   Color.fromRGBO(76, 179, 74, 0.7),
-                      //   Colors.green
-                      // ])),
-                      child: Column(
-                        children: [
-                          SizedBox(
-                            height: 20.h,
-                          ),
-                          Text(
-                            h_date.toFormat(' MMMM'),
-                            style: TextStyle(
-                                fontSize: 30, fontWeight: FontWeight.w400),
-                          ),
-                          SizedBox(
-                            height: 10.h,
-                          ),
-                          Text(
-                            h_date.toFormat('dd'),
-                            style: TextStyle(
-                                fontSize: 25, fontWeight: FontWeight.w400),
-                          ),
-                        ],
-                      ),
-                    ),
+                  Text(
+                    '$monthformatted',
+                    style: TextStyle(fontSize: 30, fontWeight: FontWeight.w400),
+                  ),
+                  SizedBox(
+                    height: 10.h,
+                  ),
+                  Text(
+                    dayformatted,
+                    style: TextStyle(fontSize: 25, fontWeight: FontWeight.w400),
                   ),
                 ],
               ),
-            ],
+            ),
           ),
-        ),
-      ],
+          // Container(
+          //   child:
+
+          Expanded(
+            child: Container(
+              color: Colors.green[200],
+              // decoration: BoxDecoration(
+              //     gradient: LinearGradient(colors: [
+              //   Color.fromRGBO(76, 179, 74, 0.7),
+              //   Colors.green
+              // ])),
+              child: Column(
+                children: [
+                  SizedBox(
+                    height: 20.h,
+                  ),
+                  Text(
+                    getHijri(),
+                    style: TextStyle(fontSize: 30, fontWeight: FontWeight.w400),
+                  ),
+                  SizedBox(
+                    height: 10.h,
+                  ),
+                  Text(
+                    h_date.toFormat('dd'),
+                    style: TextStyle(fontSize: 25, fontWeight: FontWeight.w400),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

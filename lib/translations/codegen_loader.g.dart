@@ -57,6 +57,22 @@ class CodegenLoader extends AssetLoader{
     "signin_text": "تسجيل الدخول",
     "cnfrm_pass": "أكد كلمة السر",
     "frgt_pass": "هل نسيت كلمة السر ؟"
+  },
+  "Tasks": {
+    "tasks_text": "مهامي",
+    "add_task": "إضافة مهمة :",
+    "task_title": "العنوان",
+    "task_date": "التاريخ",
+    "task_priority": "الأولوية",
+    "task_add": "إضافة",
+    "task_update": "تعديل",
+    "task_delete": "حذف",
+    "task_prio_Low": "أقل أهمية",
+    "task_prio_Med": "مهم",
+    "task_prio_high": "مهم جدا",
+    "back_button": "رجوع",
+    "enter_title": "يجب اضافة عنوان للمهمة ! ",
+    "enter_prio_validation": " يجب تحديد درجة أولوية !"
   }
 };
 static const Map<String,dynamic> en = {
@@ -102,6 +118,22 @@ static const Map<String,dynamic> en = {
     "signin_text": "Sign in",
     "cnfrm_pass": "Confirm Your Password",
     "frgt_pass": "Forgot Your Password ?"
+  },
+  "Tasks": {
+    "tasks_text": "My Tasks",
+    "add_task": "Add a Task :",
+    "task_title": "Title",
+    "task_date": "Date",
+    "task_priority": "Priority",
+    "task_add": "Add",
+    "task_update": "Update",
+    "task_delete": "Delete",
+    "task_prio_Low": "Low",
+    "task_prio_Med": "Meduim",
+    "task_prio_high": "High",
+    "back_button": "Back",
+    "enter_title": "Please Enter a task title !",
+    "enter_prio_validation": "Please Enter a Priority Level !"
   }
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"ar": ar, "en": en};

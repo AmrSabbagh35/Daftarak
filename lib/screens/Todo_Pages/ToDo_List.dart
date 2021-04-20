@@ -4,6 +4,8 @@ import 'package:test_login/helpers/database_help.dart';
 import 'package:test_login/models/Tasks/Tasks.dart';
 import 'package:test_login/screens/ToDo_Pages/Add_task.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:test_login/translations/local_keys.g.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class TodoList extends StatefulWidget {
   @override
@@ -110,7 +112,7 @@ class _TodoListState extends State<TodoList> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         Text(
-                          'My Tasks',
+                          LocaleKeys.Tasks_tasks_text.tr(),
                           style: TextStyle(
                               color: Colors.black,
                               fontSize: 40,
@@ -140,7 +142,7 @@ class _TodoListState extends State<TodoList> {
                   builder: (context) => AddTaskScreen(
                         updateTaskList: _updatetaskslist,
                       ))),
-          tooltip: 'Add Task',
+          tooltip: LocaleKeys.Tasks_add_task.tr(),
           child: Icon(Icons.add)),
     );
   }

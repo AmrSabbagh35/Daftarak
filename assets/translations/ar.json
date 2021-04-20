@@ -41,5 +41,21 @@
     "signin_text": "تسجيل الدخول",
     "cnfrm_pass": "أكد كلمة السر",
     "frgt_pass": "هل نسيت كلمة السر ؟"
+  },
+  "Tasks": {
+    "tasks_text": "مهامي",
+    "add_task": "إضافة مهمة :",
+    "task_title": "العنوان",
+    "task_date": "التاريخ",
+    "task_priority": "الأولوية",
+    "task_add": "إضافة",
+    "task_update": "تعديل",
+    "task_delete": "حذف",
+    "task_prio_Low": "أقل أهمية",
+    "task_prio_Med": "مهم",
+    "task_prio_high": "مهم جدا",
+    "back_button": "رجوع",
+    "enter_title": "يجب اضافة عنوان للمهمة ! ",
+    "enter_prio_validation": " يجب تحديد درجة أولوية !"
   }
 }

@@ -3,6 +3,8 @@ import 'package:intl/intl.dart';
 import 'package:test_login/helpers/database_help.dart';
 import 'package:test_login/models/Tasks/Tasks.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:easy_localization/easy_localization.dart';
+import 'package:test_login/translations/local_keys.g.dart';
 
 class AddTaskScreen extends StatefulWidget {
   final Function updateTaskList;
@@ -22,7 +24,11 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
 
   final DateFormat _dateFormatter = DateFormat('MMM dd, yyyy');
 
-  final List<String> _priorities = ['Low', 'Meduim', 'High'];
+  final List<String> _priorities = [
+    LocaleKeys.Tasks_task_prio_Low.tr(),
+    LocaleKeys.Tasks_task_prio_Med.tr(),
+    LocaleKeys.Tasks_task_prio_high.tr()
+  ];
 
   @override
   void initState() {
@@ -102,7 +108,7 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
                         Icons.arrow_back_ios,
                         color: Colors.green[300],
                       ),
-                      Text('Back',
+                      Text(LocaleKeys.Tasks_back_button.tr(),
                           style: TextStyle(
                               fontSize: 20, color: Colors.green[300])),
                     ],
@@ -110,7 +116,9 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
                 ),
                 SizedBox(height: 20.h),
                 Text(
-                  widget.task == null ? 'Add a Task :' : 'Update Task',
+                  widget.task == null
+                      ? LocaleKeys.Tasks_add_task.tr()
+                      : LocaleKeys.Tasks_task_update.tr(),
                   style: TextStyle(
                       color: Colors.black,
                       fontSize: 40,
@@ -125,12 +133,12 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
                         child: TextFormField(
                           style: TextStyle(fontSize: 18),
                           decoration: InputDecoration(
-                              labelText: 'Title',
+                              labelText: LocaleKeys.Tasks_task_title.tr(),
                               labelStyle: TextStyle(fontSize: 18),
                               border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(10))),
                           validator: (input) => input.trim().isEmpty
-                              ? 'Please Enter a task title !'
+                              ? LocaleKeys.Tasks_enter_title.tr()
                               : null,
                           onSaved: (input) => _title = input,
                           initialValue: _title,
@@ -143,7 +151,7 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
                           controller: _dateController,
                           readOnly: true,
                           decoration: InputDecoration(
-                              labelText: 'Date',
+                              labelText: LocaleKeys.Tasks_task_date.tr(),
                               labelStyle: TextStyle(fontSize: 18),
                               border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(10))),
@@ -168,12 +176,12 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
                               .toList(),
                           style: TextStyle(fontSize: 18),
                           decoration: InputDecoration(
-                              labelText: 'Priority',
+                              labelText: LocaleKeys.Tasks_task_priority.tr(),
                               labelStyle: TextStyle(fontSize: 18),
                               border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(10))),
                           validator: (input) => _priority == null
-                              ? 'Please Enter a Priority Level !'
+                              ? LocaleKeys.Tasks_enter_prio_validation.tr()
                               : null,
                           onSaved: (input) => _priority = input,
                           onChanged: (value) {
@@ -195,7 +203,9 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
                         child: FlatButton(
                             onPressed: _submit,
                             child: Text(
-                              widget.task == null ? 'Add' : 'Update',
+                              widget.task == null
+                                  ? LocaleKeys.Tasks_task_add.tr()
+                                  : LocaleKeys.Tasks_task_update.tr(),
                               style:
                                   TextStyle(color: Colors.white, fontSize: 20),
                             )),
@@ -215,7 +225,7 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
                                   shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(30)),
                                   child: Text(
-                                    'Delete',
+                                    LocaleKeys.Tasks_task_delete.tr(),
                                     style: TextStyle(
                                         color: Colors.white, fontSize: 20),
                                   )),

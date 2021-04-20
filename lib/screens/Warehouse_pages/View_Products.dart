@@ -1,3 +1,4 @@
+import 'package:expansion_tile_card/expansion_tile_card.dart';
 import 'package:flutter/material.dart';
 
 class View_Products extends StatefulWidget {
@@ -33,7 +34,7 @@ class _View_ProductsState extends State<View_Products> {
         child: SingleChildScrollView(
           child: Column(children: [
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(10.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
@@ -41,8 +42,12 @@ class _View_ProductsState extends State<View_Products> {
                     Icons.arrow_back_ios,
                     color: Colors.blue[600],
                   ),
-                  Text('Back',
-                      style: TextStyle(fontSize: 20, color: Colors.blue[600])),
+                  InkWell(
+                    onTap: () => Navigator.pop(context),
+                    child: Text('Back',
+                        style:
+                            TextStyle(fontSize: 20, color: Colors.blue[600])),
+                  ),
                   SizedBox(
                     width: 70,
                   ),
@@ -73,6 +78,91 @@ class _View_ProductsState extends State<View_Products> {
                 ],
               ),
             ),
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Container(
+                child: Column(
+                  children: [
+                    ExpansionTileCard(
+                      initialElevation: 20,
+                      elevation: 20,
+                      borderRadius: BorderRadius.circular(10),
+                      // baseColor: Colors.yellow[900],
+                      title: Text('Category'),
+                      children: [
+                        ExpansionTile(
+                          title: Text('Subcategory'),
+                          children: [
+                            ListTile(
+                              title: Text('Product 1'),
+                              subtitle: Text('date'),
+                            ),
+                            ListTile(
+                              title: Text('Product 2'),
+                              subtitle: Text('date'),
+                            ),
+                            ListTile(
+                              title: Text('Product 3'),
+                              subtitle: Text('date'),
+                            )
+                          ],
+                        )
+                      ],
+                    ),
+                    ExpansionTileCard(
+                      elevation: 20,
+                      borderRadius: BorderRadius.circular(10),
+                      // baseColor: Colors.yellow[900],
+                      title: Text('Category'),
+                      children: [
+                        ExpansionTile(
+                          title: Text('Subcategory'),
+                          children: [
+                            ListTile(
+                              title: Text('Product 1'),
+                              subtitle: Text('date'),
+                            ),
+                            ListTile(
+                              title: Text('Product 2'),
+                              subtitle: Text('date'),
+                            ),
+                            ListTile(
+                              title: Text('Product 3'),
+                              subtitle: Text('date'),
+                            )
+                          ],
+                        )
+                      ],
+                    ),
+                    ExpansionTileCard(
+                      elevation: 20,
+                      borderRadius: BorderRadius.circular(10),
+                      // baseColor: Colors.yellow[900],
+                      title: Text('Category'),
+                      children: [
+                        ExpansionTile(
+                          title: Text('Subcategory'),
+                          children: [
+                            ListTile(
+                              title: Text('Product 1'),
+                              subtitle: Text('date'),
+                            ),
+                            ListTile(
+                              title: Text('Product 2'),
+                              subtitle: Text('date'),
+                            ),
+                            ListTile(
+                              title: Text('Product 3'),
+                              subtitle: Text('date'),
+                            )
+                          ],
+                        )
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            )
           ]),
         ),
       ),

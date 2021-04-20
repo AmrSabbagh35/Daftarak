@@ -26,14 +26,38 @@ class _RemindersCardState extends State<RemindersCard> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(
-              height: 20.h,
+              height: 10,
+            ),
+            Card(
+              // margin: EdgeInsets.all(10),
+              color: Colors.brown[800],
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(30)),
+              elevation: 10,
+              clipBehavior: Clip.antiAlias,
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(
+                  LocaleKeys.Home_reminder_text.tr(),
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold),
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 10.h,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                SizedBox(
+                  width: 10,
+                ),
                 CircleAvatar(
-                  radius: 25,
+                  radius: 20,
                   backgroundColor: Colors.yellow[200],
                   child: Image.asset(
                     'assets/images/re.png',
@@ -43,25 +67,6 @@ class _RemindersCardState extends State<RemindersCard> {
                 SizedBox(
                   width: 10.w,
                 ),
-                Container(
-                  decoration:
-                      BoxDecoration(borderRadius: BorderRadius.circular(50)),
-                  child: Card(
-                    color: Colors.brown[300],
-                    elevation: 10,
-                    clipBehavior: Clip.antiAlias,
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text(
-                        LocaleKeys.Home_reminder_text.tr(),
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold),
-                      ),
-                    ),
-                  ),
-                )
               ],
             ),
           ],

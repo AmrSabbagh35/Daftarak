@@ -41,5 +41,21 @@
     "signin_text": "Sign in",
     "cnfrm_pass": "Confirm Your Password",
     "frgt_pass": "Forgot Your Password ?"
+  },
+  "Tasks": {
+    "tasks_text": "My Tasks",
+    "add_task": "Add a Task :",
+    "task_title": "Title",
+    "task_date": "Date",
+    "task_priority": "Priority",
+    "task_add": "Add",
+    "task_update": "Update",
+    "task_delete": "Delete",
+    "task_prio_Low": "Low",
+    "task_prio_Med": "Meduim",
+    "task_prio_high": "High",
+    "back_button": "Back",
+    "enter_title": "Please Enter a task title !",
+    "enter_prio_validation": "Please Enter a Priority Level !"
   }
 }
