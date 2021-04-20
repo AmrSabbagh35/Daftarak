@@ -80,6 +80,44 @@ class _Settings_ScreenState extends State<Settings_Screen> {
                   ),
                 ],
               ),
+            ),
+            SizedBox(
+              height: 3,
+            ),
+            Card(
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10)),
+              child: Column(
+                children: [
+                  ExpansionTileCard(
+                    baseColor: Colors.white,
+                    leading: Icon(
+                      FontAwesomeIcons.moon,
+                      color: Colors.blue[600],
+                    ),
+                    title: Text('Change Theme'),
+                    children: <Widget>[
+                      Divider(
+                        thickness: 2,
+                      ),
+                      InkWell(
+                        onTap: () {},
+                        child: ListTile(
+                          title: Text('Light'),
+                          trailing: Icon(FontAwesomeIcons.sun),
+                        ),
+                      ),
+                      InkWell(
+                        onTap: () {},
+                        child: ListTile(
+                          title: Text('Dark'),
+                          trailing: Icon(FontAwesomeIcons.cloudMoon),
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             )
           ],
         ),
