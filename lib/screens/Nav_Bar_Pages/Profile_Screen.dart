@@ -1,6 +1,9 @@
 import 'package:avatar_glow/avatar_glow.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:easy_localization/easy_localization.dart';
+import 'package:test_login/screens/Settings_Screen/settings.dart';
+import 'package:test_login/translations/local_keys.g.dart';
 
 class Profile_Screen extends StatefulWidget {
   @override
@@ -10,7 +13,6 @@ class Profile_Screen extends StatefulWidget {
 class _Profile_ScreenState extends State<Profile_Screen> {
   int _currentIndex = 0;
   final List<Widget> _children = [];
-
   @override
   Widget build(BuildContext context) {
     final screenHeight = MediaQuery.of(context).size.height;
@@ -77,7 +79,10 @@ class _Profile_ScreenState extends State<Profile_Screen> {
                           vertical: 10.0,
                           horizontal: 20.0,
                         ),
-                        onPressed: () {},
+                        onPressed: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Settings_Screen())),
                         color: Colors.teal,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(30.0),
@@ -87,7 +92,7 @@ class _Profile_ScreenState extends State<Profile_Screen> {
                           color: Colors.white,
                         ),
                         label: Text(
-                          'Settings',
+                          LocaleKeys.settings_settings_text.tr(),
                           style: TextStyle(
                             fontSize: 16.0,
                             fontWeight: FontWeight.w600,
@@ -110,7 +115,7 @@ class _Profile_ScreenState extends State<Profile_Screen> {
                           color: Colors.white,
                         ),
                         label: Text(
-                          'Log Out',
+                          LocaleKeys.Profile_Logout_text.tr(),
                           style: TextStyle(
                             fontSize: 16.0,
                             fontWeight: FontWeight.w600,

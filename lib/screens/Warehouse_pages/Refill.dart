@@ -276,7 +276,7 @@ class _Refill_ScreenState extends State<Refill_Screen> {
                             ),
                           ),
                           DataColumn(
-                            numeric: true,
+                            // numeric: true,
                             label: Text(
                               'Price',
                               style: TextStyle(fontStyle: FontStyle.italic),
@@ -294,7 +294,6 @@ class _Refill_ScreenState extends State<Refill_Screen> {
                             ],
                           ),
                           DataRow(
-                            selected: true,
                             cells: <DataCell>[
                               DataCell(Text('Janine')),
                               DataCell(Text('43')),

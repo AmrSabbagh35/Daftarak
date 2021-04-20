@@ -1,0 +1,45 @@
+{
+  "Logstexts": {
+    "Month_text": "شهري",
+    "year_text": "سنوي",
+    "Daily_text": "يومي",
+    "All_text": "جميع",
+    "Logs_text": "السجل"
+  },
+  "Debts_Texts": {
+    "debtor_text": "مدين",
+    "Creditor_text": "دائن",
+    "debts_text": "ديونك"
+  },
+  "Profile": {
+    "Logout_text": "تسجيل الخروج"
+  },
+  "settings": {
+    "chnge_lang": "تغيير اللغة",
+    "settings_text": "الإعدادات"
+  },
+  "NavBar": {
+    "home_text": "الرئيسية",
+    "warehouse_text": "المستودع",
+    "logs_text": "السجل",
+    "profile_text": "حسابي"
+  },
+  "Home": {
+    "Welcome_text": "مرحبا , نحن في خدمتك !",
+    "title_text": "دفترك",
+    "reminder_text": "تذكير اليوم :"
+  },
+  "Warehouse": {
+    "add_products_text": "إضافة منتجات",
+    "view_products_text": "عرض المنتجات",
+    "refill_text": "إعادة تعبئة",
+    "delete_prodcuts_text": "إزالة منتجات"
+  },
+  "Login": {
+    "username_text": "اسم المستخدم",
+    "pass_text": "كلمة السر",
+    "signin_text": "تسجيل الدخول",
+    "cnfrm_pass": "أكد كلمة السر",
+    "frgt_pass": "هل نسيت كلمة السر ؟"
+  }
+}

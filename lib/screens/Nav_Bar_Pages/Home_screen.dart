@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:test_login/translations/local_keys.g.dart';
 import 'package:test_login/widgets/widget.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class Homescreen extends StatefulWidget {
   @override
@@ -17,7 +19,7 @@ class _HomescreenState extends State<Homescreen> {
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
           child: Text(
-            "Welcome, \nAt Your Service !",
+            LocaleKeys.Home_Welcome_text.tr(),
             style: TextStyle(
                 color: Colors.black,
                 fontSize: 28.0,

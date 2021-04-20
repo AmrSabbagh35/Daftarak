@@ -1,0 +1,45 @@
+{
+  "Logstexts": {
+    "Month_text": "Monthly",
+    "year_text": "Yearly",
+    "Daily_text": "Daily",
+    "All_text": "All",
+    "Logs_text": "Check Your Logs"
+  },
+  "Debts_Texts": {
+    "debtor_text": "Debtor",
+    "Creditor_text": "Creditor",
+    "debts_text": "Check Your Debts"
+  },
+  "Profile": {
+    "Logout_text": "Log Out"
+  },
+  "settings": {
+    "chnge_lang": "Change Language",
+    "settings_text": "Settings"
+  },
+  "NavBar": {
+    "home_text": "Home",
+    "warehouse_text": "Warehouse",
+    "logs_text": "Logs",
+    "profile_text": "Profle"
+  },
+  "Home": {
+    "Welcome_text": "Welcome, At Your Service !",
+    "title_text": "Daftarak",
+    "reminder_text": "Today's Reminder :"
+  },
+  "Warehouse": {
+    "add_products_text": "Add Products",
+    "view_products_text": "View Products",
+    "refill_text": "Refill",
+    "delete_prodcuts_text": "Delete Products"
+  },
+  "Login": {
+    "username_text": "Username",
+    "pass_text": "Password",
+    "signin_text": "Sign in",
+    "cnfrm_pass": "Confirm Your Password",
+    "frgt_pass": "Forgot Your Password ?"
+  }
+}

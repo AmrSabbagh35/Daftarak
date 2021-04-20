@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:test_login/screens/Nav_Bar_Pages/nav_screens.dart';
+import 'package:test_login/translations/local_keys.g.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class BottomNav extends StatefulWidget {
   @override
@@ -30,7 +32,7 @@ class _BottomNavState extends State<BottomNav> {
       backgroundColor: Colors.white,
       extendBody: true,
       appBar: AppBar(
-        title: Center(child: Text('My App')),
+        title: Center(child: Text(LocaleKeys.Home_title_text.tr())),
       ),
       body: _children[_currentIndex],
       bottomNavigationBar: Container(
@@ -56,7 +58,7 @@ class _BottomNavState extends State<BottomNav> {
             items: [
               BottomNavigationBarItem(
                 icon: Icon(Icons.home, size: 30),
-                label: "Home",
+                label: LocaleKeys.NavBar_home_text.tr(),
                 activeIcon: Icon(
                   Icons.home_outlined,
                   size: 30,
@@ -64,7 +66,7 @@ class _BottomNavState extends State<BottomNav> {
               ),
               BottomNavigationBarItem(
                 icon: Icon(Icons.book, size: 30),
-                label: "Logs",
+                label: LocaleKeys.NavBar_logs_text.tr(),
                 activeIcon: Icon(
                   Icons.menu_book,
                   size: 30,
@@ -89,10 +91,10 @@ class _BottomNavState extends State<BottomNav> {
                     Icons.local_shipping_outlined,
                     size: 30,
                   ),
-                  label: "Warehouse"),
+                  label: LocaleKeys.NavBar_warehouse_text.tr()),
               BottomNavigationBarItem(
                 icon: Icon(Icons.person, size: 30),
-                label: 'Profile',
+                label: LocaleKeys.NavBar_profile_text.tr(),
                 activeIcon: Icon(
                   Icons.person_outline_outlined,
                   size: 30,

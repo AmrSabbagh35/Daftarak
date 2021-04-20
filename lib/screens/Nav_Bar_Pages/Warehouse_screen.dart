@@ -3,6 +3,8 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:test_login/screens/Warehouse_pages/Add_Product.dart';
 import 'package:test_login/screens/Warehouse_pages/Refill.dart';
 import 'package:test_login/screens/Warehouse_pages/View_Products.dart';
+import 'package:test_login/translations/local_keys.g.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class Warehouse_screen extends StatefulWidget {
   @override
@@ -32,7 +34,7 @@ class _Warehouse_screenState extends State<Warehouse_screen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      "Your Warehouse",
+                      LocaleKeys.NavBar_warehouse_text.tr(),
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: 28.0,
@@ -86,7 +88,7 @@ class _Warehouse_screenState extends State<Warehouse_screen> {
                             Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Text(
-                                "Add Products",
+                                LocaleKeys.Warehouse_add_products_text.tr(),
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                     color: Colors.black,
@@ -124,7 +126,7 @@ class _Warehouse_screenState extends State<Warehouse_screen> {
                             Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Text(
-                                "View Products",
+                                LocaleKeys.Warehouse_view_products_text.tr(),
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                     color: Colors.black,
@@ -165,7 +167,7 @@ class _Warehouse_screenState extends State<Warehouse_screen> {
                             Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Text(
-                                "Refill",
+                                LocaleKeys.Warehouse_refill_text.tr(),
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                     color: Colors.black,
@@ -203,7 +205,7 @@ class _Warehouse_screenState extends State<Warehouse_screen> {
                             Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Text(
-                                "Delete Products",
+                                LocaleKeys.Warehouse_delete_prodcuts_text.tr(),
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                     color: Colors.black,

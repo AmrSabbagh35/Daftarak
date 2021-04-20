@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:test_login/screens/Logs_Pages/Daily_Logs.dart';
+import 'package:test_login/translations/local_keys.g.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class Logs_Screen extends StatefulWidget {
   @override
@@ -26,7 +28,7 @@ class _Logs_ScreenState extends State<Logs_Screen> {
               padding: const EdgeInsets.all(8.0),
               child: Center(
                 child: Text(
-                  "Check Your Logs",
+                  LocaleKeys.Logstexts_Logs_text.tr(),
                   style: TextStyle(
                       color: Colors.white,
                       fontSize: 28.0,
@@ -67,7 +69,7 @@ class _Logs_ScreenState extends State<Logs_Screen> {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: <Widget>[
                             Text(
-                              "Daily",
+                              LocaleKeys.Logstexts_Daily_text.tr(),
                               style: TextStyle(
                                   color: Colors.black,
                                   fontWeight: FontWeight.bold,
@@ -101,7 +103,7 @@ class _Logs_ScreenState extends State<Logs_Screen> {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: <Widget>[
                             Text(
-                              "Monthly",
+                              LocaleKeys.Logstexts_Month_text.tr(),
                               style: TextStyle(
                                   color: Colors.black,
                                   fontWeight: FontWeight.bold,
@@ -135,7 +137,7 @@ class _Logs_ScreenState extends State<Logs_Screen> {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: <Widget>[
                             Text(
-                              "Yearly",
+                              LocaleKeys.Logstexts_year_text.tr(),
                               style: TextStyle(
                                   color: Colors.black,
                                   fontWeight: FontWeight.bold,
@@ -169,7 +171,7 @@ class _Logs_ScreenState extends State<Logs_Screen> {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: <Widget>[
                             Text(
-                              "All",
+                              LocaleKeys.Logstexts_All_text.tr(),
                               style: TextStyle(
                                   color: Colors.black,
                                   fontWeight: FontWeight.bold,
@@ -199,7 +201,7 @@ class _Logs_ScreenState extends State<Logs_Screen> {
               padding: const EdgeInsets.all(8.0),
               child: Center(
                 child: Text(
-                  "Check Your Debts",
+                  LocaleKeys.Debts_Texts_debts_text.tr(),
                   style: TextStyle(
                       color: Colors.white,
                       fontSize: 28.0,
@@ -237,7 +239,7 @@ class _Logs_ScreenState extends State<Logs_Screen> {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: <Widget>[
                             Text(
-                              "مدين",
+                              LocaleKeys.Debts_Texts_debtor_text.tr(),
                               style: TextStyle(
                                   color: Colors.black,
                                   fontWeight: FontWeight.bold,
@@ -271,7 +273,7 @@ class _Logs_ScreenState extends State<Logs_Screen> {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: <Widget>[
                             Text(
-                              "دائن",
+                              LocaleKeys.Debts_Texts_Creditor_text.tr(),
                               style: TextStyle(
                                   color: Colors.black,
                                   fontWeight: FontWeight.bold,

@@ -1,6 +1,8 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_login/flutter_login.dart';
+import 'package:test_login/translations/local_keys.g.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class LoginWidget extends StatefulWidget {
   @override
@@ -59,18 +61,18 @@ class _LoginWidgetState extends State<LoginWidget> {
               splashColor: Colors.cyan[200],
               highlightColor: Colors.cyan[400],
               highlightElevation: 6)),
-      title: "دفترك",
+      title: LocaleKeys.Home_title_text.tr(),
       logo: "assets/images/icon.jpg",
       onSignup: (_) => Future(null),
       onLogin: (_) => Future(null),
       onRecoverPassword: (_) => Future(null),
       messages: LoginMessages(
-        usernameHint: 'Username',
-        passwordHint: 'Password',
-        confirmPasswordHint: 'Confirm Your Password',
-        loginButton: 'Log In',
+        usernameHint: LocaleKeys.Login_username_text.tr(),
+        passwordHint: LocaleKeys.Login_pass_text.tr(),
+        confirmPasswordHint: LocaleKeys.Login_cnfrm_pass.tr(),
+        loginButton: LocaleKeys.Login_signin_text.tr(),
         signupButton: '',
-        forgotPasswordButton: 'Forgot Password ?',
+        forgotPasswordButton: LocaleKeys.Login_frgt_pass.tr(),
         recoverPasswordButton: 'Help',
         goBackButton: 'Go Back',
         confirmPasswordError: 'Password Not Match',
