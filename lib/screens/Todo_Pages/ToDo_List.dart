@@ -51,7 +51,7 @@ class _TodoListState extends State<TodoList> {
                           : TextDecoration.lineThrough),
                 ),
                 subtitle: Text(
-                  '${_dateFormatter.format(task.date)} - ${task.priority}',
+                  '${_dateFormatter.format(task.date)} - ${task.priority.tr()}',
                   style: TextStyle(
                       fontSize: 15,
                       decoration: task.status == 0

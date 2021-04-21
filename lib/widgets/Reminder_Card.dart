@@ -30,7 +30,7 @@ class _RemindersCardState extends State<RemindersCard> {
             ),
             Card(
               // margin: EdgeInsets.all(10),
-              color: Colors.brown[800],
+              color: Colors.brown[800].withOpacity(0.7),
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30)),
               elevation: 10,
